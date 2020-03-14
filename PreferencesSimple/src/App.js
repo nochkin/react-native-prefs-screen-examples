@@ -21,8 +21,8 @@ export default class App extends React.Component {
             }, {
                 title: 'Section 3',
                 data: [
-                    {id: 30, name: 'checkbox1', text: 'Checkbox 1', subtext: 'Checkbox checked by default', type: PREF_TYPE.CHECKBOX},
-                    {id: 31, name: 'checkbox2', text: 'Checkbox 2', subtext: 'Checkbox not-checked by default', type: PREF_TYPE.CHECKBOX},
+                    {id: 30, name: 'checkbox1', text: 'Checkbox 1', subtext: 'Checkbox checked by default', type: PREF_TYPE.SWITCH},
+                    {id: 31, name: 'checkbox2', text: 'Checkbox 2', subtext: 'Checkbox not-checked by default', type: PREF_TYPE.SWITCH},
                 ]
             }
         ];
@@ -49,6 +49,8 @@ export default class App extends React.Component {
     render() {
         return (
             <Preferences
+                styles={{sectionHeader: {color: 'red'}, menuItemValueSwitch: {tintColor: 'gray'}}}
+                containerStyle={{backgroundColor: '#f0f0f0'}}
                 getValue={this.getValue}
                 onChange={this.onChange}
                 items={this.items}
